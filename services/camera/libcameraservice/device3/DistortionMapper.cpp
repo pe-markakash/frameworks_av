@@ -226,7 +226,7 @@ status_t DistortionMapper::updateCalibration(const CameraMetadata &result, bool 
     calib = result.find(calibrationKey);
     distortion = result.find(distortionKey);
     if ((calib.count != 5) || (distortion.count != 5)) {
-        ALOGE("Calib para count error, calib.count = %d, distortion.count= %d",
+        ALOGE("Calib para count error, calib.count = %zu, distortion.count= %zu",
                 calib.count, distortion.count);
     }
     if (calib.count != 5) return BAD_VALUE;
